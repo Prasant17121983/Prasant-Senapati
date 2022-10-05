@@ -1,0 +1,24 @@
+@page "/"
+@inject NavigationManager NavigationManager
+
+<div class="row-layout view-1-container">
+    <IgbTree class="tree" view-1-scope>
+        <IgbTreeItem Label="TURBINE" Expanded="true">
+            <IgbTreeItem Label="MDBFP" Expanded="true" @onclick="@(e => Navigate("view-3"))"></IgbTreeItem>
+            <IgbTreeItem Label="CEP" Expanded="true"></IgbTreeItem>
+            <IgbTreeItem Label="ETS" Expanded="true"></IgbTreeItem>
+        </IgbTreeItem>
+        <IgbTreeItem Label="Development" Expanded="true">
+            <IgbTreeItem Label="Angular" Expanded="true"></IgbTreeItem>
+            <IgbTreeItem Label="Blazor" Expanded="true"></IgbTreeItem>
+            <IgbTreeItem Label="Web components" Expanded="true"></IgbTreeItem>
+        </IgbTreeItem>
+    </IgbTree>
+</div>
+
+@code {
+    private void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

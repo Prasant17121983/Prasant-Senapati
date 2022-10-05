@@ -1,0 +1,14 @@
+.row-layout {
+    display: flex;
+}
+.view-1-container {
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+    height: 100%;
+}
+.tree {
+    min-width: max-content;
+    min-height: max-content;
+    flex-shrink: 0;
+}
